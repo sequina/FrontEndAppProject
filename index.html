@@ -5,12 +5,14 @@
   <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body ng-app = "DoggyDayCareApp">
 
 <label for="search">Enter Zip Code</label>
   <input type="zipcode" name="zipcode" id="zipcode" class="form-control" required />
 
-
+<div id="map" ng-controller="mapsCtrl">
+      <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+</div>
 
 
 
@@ -22,16 +24,24 @@
   <!--Bootstrap.js-->
   <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- Angular -->
+  <script src='lib/bower_components/lodash/lodash.min.js'></script>
   <script src="lib/bower_components/angular/angular.min.js"></script>
   <!-- Firebase -->
   <script src="lib/bower_components/firebase/firebase.js"></script>
   <!-- AngularFire -->
   <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
-  <!-- Angular Filter -->
-  <script src="lib/bower_components/angular-filter/dist/angular-filter.min.js"></script>
   <!-- Angular Route -->
   <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+  <!-- Angular Google Maps -->
+
+  <script src='lib/bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+  <script src='lib/bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+<!-- Google Map API -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP6t36O6pZArVuHSoD3nEUBBTwUMFCwdg&signed_in=true&libraries=places&callback=initMap" async defer></script> -->
   <!-- My Stuff -->
-  <script src="js/app.js"></script>
+  <script src="ctrls/app.js"></script>
+  <script src="ctrls/searchText.js"></script>
+  </body>
+</html>
 </body>
 </html>
