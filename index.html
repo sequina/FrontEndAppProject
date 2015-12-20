@@ -13,7 +13,8 @@
     ng-disabled="searchForm.$invalid">Search</button>
 
 <div id="map" ng-controller="mapsCtrl">
-      <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+  <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+  <div ng-view></div>
 </div>
 
 
@@ -25,6 +26,9 @@
   <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
   <!--Bootstrap.js-->
   <script src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Google Map API -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/place/autocomplete/xml?input=Nashville&types=establishment&location=36.0000,86.0000&radius=500&key=AIzaSyDP6t36O6pZArVuHSoD3nEUBBTwUMFCwdg"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP6t36O6pZArVuHSoD3nEUBBTwUMFCwdg&libraries=places"></script>
   <!-- Angular -->
   <script src='lib/bower_components/lodash/lodash.min.js'></script>
   <script src="lib/bower_components/angular/angular.min.js"></script>
@@ -37,11 +41,12 @@
   <!-- Angular Google Maps -->
   <script src='lib/bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
   <script src='lib/bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
-<!-- Google Map API -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP6t36O6pZArVuHSoD3nEUBBTwUMFCwdg&libraries=places"></script>
+
   <!-- My Stuff -->
   <script src="ctrls/app.js"></script>
   <script src="ctrls/mapsCtrl.js"></script>
+  <script src="ctrls/loginCtrl.js"></script>
+  <script src="partials/login.html"></script>
   </body>
 </html>
 </body>

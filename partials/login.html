@@ -1,0 +1,16 @@
+<div class="row" id="logIn">
+  <div class="logIn col-sm-12">
+    <form name="logInForm">
+
+      <h3>Welcome to DoggyDayCare App</h3>
+      <p>Log in to search for daycares.</p>
+
+      <input required type="email" ng-model="authCtrl.email" placeholder="Email"/>
+      <input required type="password" ng-model="authCtrl.password" placeholder="Password"/>
+      <button type='button' ng-click="authCtrl.logIn()" ng-show="authCtrl.email && authCtrl.password">LogIn</button>
+
+    <h4>You can also log in using Facebook</h4>
+    <img class='iconImg' src="https://cdn0.iconfinder.com/data/icons/yooicons_set01_socialbookmarks/512/social_facebook_box_blue.png" ng-click="authCtrl.authWith('facebook')" alt="Auth With Facebook"/>
+    </form>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 app.controller('mapsCtrl', function($scope, uiGmapGoogleMapApi) {
     uiGmapGoogleMapApi.then(function(maps) {
-            // add map with base parameters
+      // add map with base parameters
     $scope.map = {
       center: {
         latitude: 37.79,
@@ -8,7 +8,7 @@ app.controller('mapsCtrl', function($scope, uiGmapGoogleMapApi) {
       },
       zoom: 13
     };
-            // add test locations for example
+    // add test locations for example
     $scope.locations = {
       spots: [
         {
